@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/btnScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/listView1"
+        android:layout_alignParentTop="true"
+        android:text="Scan for Devices" />
+
+      <TextView
+          android:id="@+id/txtUpdate"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/btnScan"
+          android:paddingBottom="10dp"
+          android:paddingTop="10dp"
+          android:text="Bluetooth Status: Not Connected"
+          android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" 
+        android:layout_below="@+id/txtUpdate">
+    </ListView>
+     <TextView
+        android:id="@+id/txtMyString"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/listView1"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="Send a command..."
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+         android:enabled="false"
+        />
+    <Button
+        android:id="@+id/btnSendData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/listView1"
+        android:layout_below="@+id/txtMyString"
+        android:text="Send a String"
+        android:enabled="false" />
+    <Button
+        android:id="@+id/btnLedOn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/listView1"
+        android:layout_below="@+id/btnSendData"
+        android:text="LED On"
+        android:enabled="false" />
+
+    <Button
+        android:id="@+id/btnLedOff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/listView1"
+        android:layout_below="@+id/btnLedOn"
+        android:text="LED Off"
+        android:enabled="false" />
+    
+</RelativeLayout>
